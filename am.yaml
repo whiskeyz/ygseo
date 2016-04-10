@@ -1,0 +1,32 @@
+# Grants users flair upon posting in stickied thread
+type: comment
+parent_submission:
+    id: ["4e5061"]
+author:
+    set_flair: ["Member", ""] #To decide on flair CSS
+    overwrite_flair: true
+comment: |
+    Welcome to YGSEO!
+    Your flair has been successfully changed to "Member".  
+    Please read the rules by the sidebar and adhere to reddiquette.
+
+---
+
+# Remove posts from users with no flair
+type: link submission
+author: 
+    ~flair_text: ["flair1", "flair2"]
+action: remove
+action_reason: "User has not introduced themselves."
+comment: |
+    Your post has been automatically removed.
+    Please make an introduction over at ________ before continuing.
+    Thank you.
+
+---
+
+# Remove posts originating from sites other than YouTube
+domain: [vimeo.com, dailymotion.com]
+action: remove
+comment: |
+    Your submission has been automatically removed. Videos from outside Youtube are prohibited.
